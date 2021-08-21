@@ -5,18 +5,16 @@ class Kcli < Formula
   desc ""
   homepage ""
   url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.1.tar.gz"
-  sha256 "667a5bf21aaac0594e9c27ba30c7a8abf16d009bffb5137e53356c520f7d1582"
+  sha256 "10c5554ff046e5c9380b3caf52961c30c36efc32ada3467eb80ffffb53aa7ac8"
   license ""
 
   depends_on "ansible"
 
   def install
     prefix.install Dir["bin"]
-    prefix.install Dir["conf"]
-    prefix.install Dir["example"]
-    prefix.install Dir["lib"]
-    prefix.install Dir["tmp"]
-    prefix.install Dir["log"]
+    var.install Dir["var/*"]
+    etc.install Dir["etc/*"]
+    bin.install Dir["bin"]
     system "sh start.sh"
   end
 
