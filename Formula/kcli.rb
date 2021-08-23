@@ -4,13 +4,14 @@
 class Kcli < Formula
   desc ""
   homepage ""
-  url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.2.tar.gz"
+  url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.1.tar.gz"
   sha256 "fa679890a8348e300cf66ce5e13a4556d51d8b84322a1fa0f9c588c143e214f2"
   license ""
 
   depends_on "ansible"
 
   def install
+    ENV.deparallelize
     bin.install Dir["bin/*"]
     etc.install Dir["etc/*"]
     
