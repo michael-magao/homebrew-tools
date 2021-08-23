@@ -1,20 +1,21 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
+#Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Kcli < Formula
   desc ""
   homepage ""
   url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.1.tar.gz"
-  sha256 "e81f511c42a7b51a1888c1b7e1ef6748f93cb216ea5580a24604f95bda24c2f4"
+  sha256 "4d6ad2ecb1cf7905fdf27bc59adca7e3579f47e9c35c39d1fca12d37d0d14c88"
   license ""
 
   depends_on "ansible"
 
   def install
-    prefix.install Dir["bin"]
-    var.install Dir["var/*"]
+    bin.install Dir["bin/*"]
     etc.install Dir["etc/*"]
-    bin.install Dir["bin"]
+    var.install Dir["run"]
+    prefix.install Dir["var/*"]
+    prefix.install Dir["log"]
     system "sh start.sh"
   end
 
