@@ -5,7 +5,7 @@ class Kcli < Formula
   desc ""
   homepage ""
   url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.1.tar.gz"
-  sha256 "145341bd6193edbf50ebe0c29336482c3b92f7558f7dbae39ab2a4cd736bcca9"
+  sha256 "b35ca850816c67683043e1faa4eef7522e452ad344cb0e9ebf66a15b540aeefa"
   license ""
 
   depends_on "ansible"
