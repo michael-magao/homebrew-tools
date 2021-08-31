@@ -8,7 +8,7 @@ class Kcli < Formula
   sha256 "100d6a765176a7c5125f0e59bb21733a4b5c2d285044535ccb0d271ce31be09f"
   license ""
 
-  depends_on "ansible"
+  # depends_on "ansible"
 
   def install
     ENV.deparallelize
