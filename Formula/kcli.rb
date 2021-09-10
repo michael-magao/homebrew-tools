@@ -4,7 +4,7 @@
 class Kcli < Formula
   desc ""
   homepage ""
-  url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.7.tar.gz"
+  url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.8.tar.gz"
   sha256 "cf6489d5d3f69ea99df887fe49fd596177d98ae1acdff1d4d9c756b29b35ba3b"
   license ""
 
