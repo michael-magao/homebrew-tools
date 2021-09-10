@@ -4,8 +4,8 @@
 class Kcli < Formula
   desc ""
   homepage ""
-  url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.5.tar.gz"
-  sha256 "a0c5b4bbdadd84dee5dd069d918211bbfa44a4168ce8af8e8af44ea2b8f1fc0a"
+  url "https://github.com/michael-magao/homebrew-tools/raw/main/kcli-0.0.6.tar.gz"
+  sha256 "bd501a8b6fd0704932128bc277f3c91f11b06009d7ca58e7545a62f388e3d110"
   license ""
 
   # depends_on "ansible"
@@ -15,7 +15,9 @@ class Kcli < Formula
     bin.install Dir["bin/*"]
     etc.install Dir["etc/*"]
     system "./start.sh"
-    prefix.install "knots.daemon.plist"
+    prefix.install "knots.daemon.start.plist"
+    prefix.install "start-daemon.sh"
+    prefix.install "stop-daemon.sh"
   end
 
   test do
